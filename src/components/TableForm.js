@@ -9,10 +9,13 @@ export default function TableForm({description,
     amount,
     setAmount,
     list,
-    setList
+    setList,
+    // total,
+    // setTotal,
 
 }) {
 
+      // Submit form function
     const handleSubmit = (e) => {
         e.preventDefault()
     }
@@ -46,7 +49,7 @@ export default function TableForm({description,
     return (
         <>
             <form onSubmit={handleSubmit}>
-            <div className="flex flex-col md-mt-15">
+            <div className="flex flex-col md:mt-15">
             <label htmlFor="description">
                 Item description
             </label>
@@ -94,6 +97,20 @@ export default function TableForm({description,
         hover:text-blue-500">Add Items</button>
     </form>
 
-        </>
+    {/* Teble items */}
+    <ul>
+        {list.map(({id, description, quantity, price, amount}) => (
+            <>
+                <li key={id}>{description}</li>
+                <li key={id}>{price}</li>
+                <li key={id}>{quantity}</li>
+                <li key={id}>{amount}</li>
+            </>
+            
+        ))}
+    </ul>
+
+
+    </>
     )
 }

@@ -1,8 +1,17 @@
-# Getting Started with Create React App
+This invoice repo has been made for the recruitment phase task assignment from trademarkia for the position of selection of react developer intern
+
+<br>
+
+Made by Shivangi Chaurasia<br>
+19BCE0607<br>
+mail- shivangi.chaurasia2019@vitstudent.ac.in<br>
+shivangichaurasia2000@gmail.com
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Available Scripts -->
 
 In the project directory, you can run:
 
@@ -11,7 +20,7 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
+<!-- The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 ### `npm test`
@@ -67,4 +76,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
