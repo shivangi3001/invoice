@@ -1,9 +1,9 @@
-export default function Notes() {
+export default function Notes({notes}) {
     return (
         <>
         {/* Notes */}
         <section className="mb-5">
-          <p> Notes to the client</p>
+          <p className="lg:w-1/2 text-justify" > Notes to the client... {notes} </p>
         </section>
         </>
     )

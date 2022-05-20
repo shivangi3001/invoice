@@ -2,10 +2,10 @@ export default function Footer({
   name,
   email,
   address,
-  website
-  // phone,
-  // bankAccount,
-  // bankName,
+  website,
+  phone,
+  bankAccount,
+  bankName
 }) {
     return (
         <>
@@ -19,19 +19,16 @@ export default function Footer({
             <span className="font-bold">Your email:</span> {email}
           </li>
           <li>
-            <span className="font-bold">Phone number:</span> 72822298
-            {/* {phone} */}
+            <span className="font-bold">Phone number:</span> {phone}
           </li>
           <li>
-            <span className="font-bold">Bank:</span> jdnnjdj
-            {/* {bankName} */}
+            <span className="font-bold">Bank:</span> {bankName}
           </li>
           <li>
             <span className="font-bold">Account holder:</span> {name}
           </li>
           <li>
-            <span className="font-bold">Account number:</span> bnk acnt
-            {/* {bankAccount} */}
+            <span className="font-bold">Account number:</span> {bankAccount}
           </li>
           <li>
             <span className="font-bold">Website:</span>{" "}

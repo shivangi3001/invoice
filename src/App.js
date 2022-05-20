@@ -37,7 +37,8 @@ function App() {
 
   return (
     <>
-     <main className="m-5 p-5 rounded shadow xl:max-w-4xl xl:mx-auto bg-white">
+     <main className="m-5 p-5 rounded shadow md:max-w-xl md:mx-auto lg:max-w-2xl
+      xl:max-w-4xl bg-white">
       {showInvoice ? ( <div>
         <Header handlePrint={handlePrint}/>
         <MainDetails name={name} address={address} />
@@ -46,7 +47,12 @@ function App() {
         dueDate={dueDate}/>
         <Table />
         <Notes notes={notes} />
-        <Footer name={name} address={address} website={website} email={email} />
+        <Footer name={name} address={address} website={website} 
+          email={email}
+          phone={phone}
+          bankAccount={bankAccount}
+          bankName={bankName}
+          />
 
         <button onClick={() => setShowInvoice(false)} className="bg-blue-500 text-white-font-bold py-2 px-8 rounded shadow
           border-2 border-blue-500 hover:bg-transparent 
