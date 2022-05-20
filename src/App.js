@@ -8,7 +8,7 @@ import ClientDetails from "./components/ClientDetails"
 import Dates from "./components/Dates"
 
 function App() {
-  const [showInvoice, setShowInvoice] = useState(false)
+  const [showInvoice, setShowInvoice] = useState(true)
   const [name, setName] = useState("")
   const [address, setAddress] = useState("")
   const [email, setEmail] = useState("")
@@ -43,9 +43,13 @@ function App() {
         <Header handlePrint={handlePrint}/>
         <MainDetails name={name} address={address} />
         <ClientDetails clientName={clientName} clientAddress={clientAddress} />
-        <Dates invoiceNumber={invoiceNumber} invoiceDate={invoiceDate} 
-        dueDate={dueDate}/>
+        <Dates 
+          invoiceNumber={invoiceNumber} invoiceDate={invoiceDate} 
+          dueDate={dueDate}/>
+
         <Table />
+
+
         <Notes notes={notes} />
         <Footer name={name} address={address} website={website} 
           email={email}
@@ -68,43 +72,64 @@ function App() {
 
 
         <div className="flex flex-col justify-center">
-          <label htmlFor="name">Enter your name</label>
-          <input type="text" name="text" id="name" placeholder="Enter your name"
-          autoComplete="off"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          />
-
-          <label htmlFor="address">Enter your address</label>
-          <input type="text" name="text" id="address" placeholder="Enter your address"
-          autoComplete="off"
-          value={address}
-          onChange={(e) => setAddress(e.target.value)}
-          />
-
-          <label htmlFor="email">Enter your email</label>
-            <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter your email"
-                autoComplete="off"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+          
+        <article className="md:grid grid-cols-2 gap-10">
+                <div className="flex flex-col">
+                  <label htmlFor="name">Your full name</label>
+                  <input
+                    type="text"
+                    name="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    autoComplete="off"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
+                </div>
 
-          <label htmlFor="website">Enter your website</label>
-            <input
-                  type="url"
-                  name="website"
-                  id="website"
-                  placeholder="Enter your website"
-                  autoComplete="off"
-                  value={website}
-                  onChange={(e) => setWebsite(e.target.value)}
-             />
+                <div className="flex flex-col">
+                  <label htmlFor="address">Enter your address</label>
+                  <input
+                    type="text"
+                    name="address"
+                    id="address"
+                    placeholder="Enter your address"
+                    autoComplete="off"
+                    value={address}
+                    onChange={(e) => setAddress(e.target.value)}
+                  />
+                </div>
+        </article>
 
-<label htmlFor="phone">Enter your phone</label>
+        <article className="md:grid grid-cols-3 gap-10">
+                <div className="flex flex-col">
+                  <label htmlFor="email">Enter your email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    autoComplete="off"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+
+                <div className="flex flex-col">
+                  <label htmlFor="website">Enter your website</label>
+                  <input
+                    type="url"
+                    name="website"
+                    id="website"
+                    placeholder="Enter your website"
+                    autoComplete="off"
+                    value={website}
+                    onChange={(e) => setWebsite(e.target.value)}
+                  />
+                </div>
+
+                <div className="flex flex-col">
+                  <label htmlFor="phone">Enter your phone</label>
                   <input
                     type="text"
                     name="phone"
@@ -114,8 +139,12 @@ function App() {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                   />
+                </div>
+              </article>
 
-<label htmlFor="bankName">Enter your bank name</label>
+              <article className="md:grid grid-cols-2 gap-10">
+                <div className="flex flex-col">
+                  <label htmlFor="bankName">Enter your bank name</label>
                   <input
                     type="text"
                     name="bankName"
@@ -125,8 +154,10 @@ function App() {
                     value={bankName}
                     onChange={(e) => setBankName(e.target.value)}
                   />
+                </div>
 
-<label htmlFor="bankAccount">
+                <div className="flex flex-col">
+                  <label htmlFor="bankAccount">
                     Enter your bank account number
                   </label>
                   <input
@@ -138,8 +169,12 @@ function App() {
                     value={bankAccount}
                     onChange={(e) => setBankAccount(e.target.value)}
                   />
+                </div>
+              </article>
 
-<label htmlFor="clientName">Enter your client's name</label>
+              <article className="md:grid grid-cols-2 gap-10 md:mt-16">
+                <div className="flex flex-col">
+                  <label htmlFor="clientName">Enter your client's name</label>
                   <input
                     type="text"
                     name="clientName"
@@ -149,8 +184,10 @@ function App() {
                     value={clientName}
                     onChange={(e) => setClientName(e.target.value)}
                   />
+                </div>
 
-<label htmlFor="clientAddress">
+                <div className="flex flex-col">
+                  <label htmlFor="clientAddress">
                     Enter your client's address
                   </label>
                   <input
@@ -161,9 +198,13 @@ function App() {
                     autoComplete="off"
                     value={clientAddress}
                     onChange={(e) => setClientAddress(e.target.value)}
-                  /> 
+                  />
+                </div>
+              </article> 
 
-<label htmlFor="invoiceNumber">Invoice Number</label>
+              <article className="md:grid grid-cols-3 gap-10">
+                <div className="flex flex-col">
+                  <label htmlFor="invoiceNumber">Invoice Number</label>
                   <input
                     type="text"
                     name="invoiceNumber"
@@ -173,8 +214,10 @@ function App() {
                     value={invoiceNumber}
                     onChange={(e) => setInvoiceNumber(e.target.value)}
                   />
+                </div>
 
-<label htmlFor="invoiceDate">Invoice Date</label>
+                <div className="flex flex-col">
+                  <label htmlFor="invoiceDate">Invoice Date</label>
                   <input
                     type="date"
                     name="invoiceDate"
@@ -184,8 +227,10 @@ function App() {
                     value={invoiceDate}
                     onChange={(e) => setInvoiceDate(e.target.value)}
                   />
+                </div>
 
-<label htmlFor="dueDate">Due Date</label>
+                <div className="flex flex-col">
+                  <label htmlFor="dueDate">Due Date</label>
                   <input
                     type="date"
                     name="dueDate"
@@ -195,6 +240,8 @@ function App() {
                     value={dueDate}
                     onChange={(e) => setDueDate(e.target.value)}
                   />
+                </div>
+              </article>
 
 <label htmlFor="notes">Additional Notes</label>
               <textarea
