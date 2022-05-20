@@ -1,4 +1,8 @@
-export default function Table() {
+export default function Table({description, quantity,
+    price,
+    amount
+
+}) {
     return (
         <>
         {/* table */}
@@ -11,7 +15,19 @@ export default function Table() {
             <td className="font-bold">Amount</td>
           </tr>
         </thead>
-        {list.map(({ id, description, quantity, price, amount }) => (
+        
+        <tbody>
+        <tr>
+            <td>{description}</td>
+            <td>{quantity}</td>
+            <td>{price}</td>
+            <td>{amount}</td>
+        </tr>
+        </tbody>
+        
+
+
+        {/* {list.map(({ id, description, quantity, price, amount }) => (
           <React.Fragment key={id}>
             <tbody>
               <tr className="h-10">
@@ -22,7 +38,7 @@ export default function Table() {
               </tr>
             </tbody>
           </React.Fragment>
-        ))}
+        ))} */}
       </table>
         </>
     )

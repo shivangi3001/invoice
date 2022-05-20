@@ -6,29 +6,30 @@ import Header from "./components/Header"
 import MainDetails from "./components/MainDetails"
 import ClientDetails from "./components/ClientDetails"
 import Dates from "./components/Dates"
+import TableForm from "./components/TableForm"
 
 function App() {
   const [showInvoice, setShowInvoice] = useState(true)
-  const [name, setName] = useState("")
-  const [address, setAddress] = useState("")
-  const [email, setEmail] = useState("")
-  const [phone, setPhone] = useState("")
-  const [bankName, setBankName] = useState("")
-  const [bankAccount, setBankAccount] = useState("")
-  const [website, setWebsite] = useState("")
-  const [clientName, setClientName] = useState("")
-  const [clientAddress, setClientAddress] = useState("")
-  const [invoiceNumber, setInvoiceNumber] = useState("")
-  const [invoiceDate, setInvoiceDate] = useState("")
-  const [dueDate, setDueDate] = useState("")
-  const [notes, setNotes] = useState("")
-  // const [description, setDescription] = useState("")
-  // const [quantity, setQuantity] = useState("")
-  // const [price, setPrice] = useState("")
-  // const [amount, setAmount] = useState("")
-  // const [list, setList] = useState([])
-  // const [total, setTotal] = useState(0)
-  // const [width] = useState(641)
+  const [name, setName] = useState("Shivangi")
+  const [address, setAddress] = useState("Varanasi")
+  const [email, setEmail] = useState("random@gmail.com")
+  const [phone, setPhone] = useState("9876456700")
+  const [bankName, setBankName] = useState("ABSA")
+  const [bankAccount, setBankAccount] = useState("123 456 7890")
+  const [website, setWebsite] = useState("https://fakestoreapi.com/")
+  const [clientName, setClientName] = useState("random")
+  const [clientAddress, setClientAddress] = useState("India")
+  const [invoiceNumber, setInvoiceNumber] = useState("877")
+  const [invoiceDate, setInvoiceDate] = useState("20/10/2021")
+  const [dueDate, setDueDate] = useState("01/11/2021")
+  const [notes, setNotes] = useState("Pay to the bank account indicated above")
+  const [description, setDescription] = useState("")
+  const [quantity, setQuantity] = useState("")
+  const [price, setPrice] = useState("")
+  const [amount, setAmount] = useState("")
+  const [list, setList] = useState([])
+  const [total, setTotal] = useState(0)
+  const [width] = useState(641)
 
 
   const handlePrint = () => {
@@ -47,7 +48,11 @@ function App() {
           invoiceNumber={invoiceNumber} invoiceDate={invoiceDate} 
           dueDate={dueDate}/>
 
-        <Table />
+        <Table description={description} 
+        quantity={quantity}
+        price={price}
+        amount={amount}
+        />
 
 
         <Notes notes={notes} />
@@ -58,7 +63,8 @@ function App() {
           bankName={bankName}
           />
 
-        <button onClick={() => setShowInvoice(false)} className="bg-blue-500 text-white-font-bold py-2 px-8 rounded shadow
+        <button onClick={() => setShowInvoice(false)} 
+        className="bg-blue-500 text-white-font-bold py-2 px-8 rounded shadow
           border-2 border-blue-500 hover:bg-transparent 
           transition-all duration-300 mt-5
           hover:text-blue-500" >Edit Information</button>
@@ -241,6 +247,21 @@ function App() {
                     onChange={(e) => setDueDate(e.target.value)}
                   />
                 </div>
+              </article>
+
+              {/* this is our table form */}
+              <article>
+                <TableForm description={description}
+                setDescription={setDescription}
+                quantity={quantity}
+                setQuantity={setQuantity}
+                price={price}
+                setPrice={setPrice}
+                amount={amount}
+                setAmount={setAmount}
+                list ={list}
+                setList={setList}
+                />
               </article>
 
 <label htmlFor="notes">Additional Notes</label>
