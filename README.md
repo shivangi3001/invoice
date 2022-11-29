@@ -1,4 +1,5 @@
-This invoice repo has been made for the recruitment phase task assignment from trademarkia for the position of selection of react developer intern
+This invoice repo is a dummy reactjs project, has been made while exploring and working on reactjs tech stack
+
 
 <br>
 
