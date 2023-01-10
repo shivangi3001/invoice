@@ -5,7 +5,7 @@ This invoice repo is a dummy reactjs project, has been made while exploring and 
 
 Made by Shivangi Chaurasia<br>
 <br>
-mail- shivangi.chaurasia2019@vitstudent.ac.in<br>
+mail- 
 shivangichaurasia2000@gmail.com
 
 <!-- # Getting Started with Create React App
